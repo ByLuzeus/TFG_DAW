@@ -1,0 +1,1227 @@
+/* ===========================
+   VARIABLES DE COLOR
+   =========================== */
+:root {
+    --fh-white: #ffffff;
+    --fh-black: #1f1f1f;
+
+    --fh-darkblue: #7583ff;
+    --fh-softblue: #cdd2ff;
+    --fh-lightgrey: #f1f1f1;
+    --fh-darkgrey: #424141;
+    --fh-green: #008f43;
+    --fh-yellow: #b8ad47;
+    --fh-red: #be342c;
+
+    --fh-lightgreen: #a2e6a0;
+    --fh-lightyellow: #f8fca8;
+    --fh-lightred: #eab6b6;
+
+    --fh-bronze: #6b4300;
+    --fh-silver: #9a9a9a;
+    --fh-gold: #ffca3d;
+    --fh-platinum: #55d2ba;
+    --fh-diamond: #68cdff;
+    --fh-master: #e64df6;
+
+    --fh-completed-bg: #a2e6a0;
+    --fh-completed-border: #008f43;
+    --fh-failed-bg: #eab6b6;
+    --fh-failed-border: #be342c;
+
+    --fh-chart-1: #4a88ff;
+    --fh-chart-2: #609bff;
+    --fh-chart-3: #79afff;
+    --fh-chart-4: #9ac3ff;
+    --fh-chart-5: #a8d7ff;
+    --fh-chart-6: #c0ebff;
+
+    --fh-error: #b00020;
+
+    --fh-transparent: #00ffffff;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+/* ===========================
+   CUERPO BASE FAMHAPP
+   =========================== */
+.fh-body {
+    margin: 0;
+    min-height: 100vh;
+    font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont,
+        "Segoe UI", sans-serif;
+    background: radial-gradient(
+        circle at top,
+        #f3f4ff 0,
+        #f7f7ff 45%,
+        #ffffff 100%
+    );
+    color: #1f2343;
+}
+
+/* ===========================
+   PÁGINA DE LOGIN
+   =========================== */
+.fh-login-page {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 32px 16px;
+}
+
+.fh-login-card {
+    width: 100%;
+    max-width: 420px;
+    background: var(--fh-white);
+    border-radius: 24px;
+    box-shadow: 0 24px 60px rgba(99, 110, 255, 0.35);
+    padding: 44px 40px 36px;
+    text-align: center;
+}
+
+.fh-login-logo img.fh-logo {
+    height: 64px;
+    width: auto;
+    margin-bottom: 24px;
+}
+
+.fh-login-title h1 {
+    font-size: 24px;
+    margin: 0 0 4px;
+    font-weight: 600;
+    color: #22254a;
+}
+
+.fh-login-title p {
+    margin: 0 0 24px;
+    font-size: 14px;
+    color: #6b6f90;
+}
+
+.fh-login-form {
+    margin-top: 4px;
+}
+
+.fh-input-group {
+    position: relative;
+    margin-bottom: 14px;
+    width: 100%;
+}
+
+.fh-input-icon {
+    position: absolute;
+    left: 16px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 16px;
+    color: #9fa4c8;
+}
+
+.fh-input {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    border-radius: 999px;
+    border: 1px solid #dde0ff;
+    background: #f5f6ff;
+    padding: 12px 16px 12px 44px;
+    font-size: 14px;
+    color: #1f2343;
+    outline: none;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease,
+        background-color 0.2s ease;
+}
+
+.fh-input::placeholder {
+    color: #a6a9c9;
+}
+
+.fh-input:focus {
+    background: #ffffff;
+    border-color: #7c8dff;
+    box-shadow: 0 0 0 3px rgba(124, 141, 255, 0.2);
+}
+
+/* ===========================
+   BOTONES / ACCIONES
+   =========================== */
+.fh-actions-row {
+    display: flex;
+    align-items: stretch;
+    justify-content: space-between;
+    gap: 12px;
+    margin-top: 18px;
+    margin-bottom: 20px;
+}
+
+.fh-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 11px 20px;
+    border-radius: 999px;
+    font-size: 14px;
+    font-weight: 600;
+    border: none;
+    cursor: pointer;
+    text-decoration: none;
+    white-space: nowrap;
+    transition: background-color 0.2s ease, box-shadow 0.2s ease,
+        transform 0.08s ease;
+}
+
+.fh-btn-primary {
+    flex: 1;
+    background: #7b8cff;
+    color: var(--fh-white);
+    box-shadow: 0 10px 24px rgba(100, 115, 255, 0.45);
+}
+
+.fh-btn-primary:hover,
+.fh-btn-primary:focus {
+    background: #6b7bfb;
+    box-shadow: 0 12px 28px rgba(100, 115, 255, 0.55);
+    transform: translateY(-1px);
+}
+
+.fh-btn-secondary {
+    background: transparent;
+    color: #454b82;
+    padding-inline: 8px;
+}
+
+.fh-btn-secondary:hover,
+.fh-btn-secondary:focus {
+    text-decoration: underline;
+}
+
+.fh-register-text {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-size: 13px;
+    color: #5b6290;
+    text-align: center;
+    padding-inline: 4px;
+}
+
+.fh-register-link {
+    color: #7b8cff;
+    font-weight: 600;
+    text-decoration: none;
+    margin-top: 2px;
+}
+
+.fh-register-link:hover,
+.fh-register-link:focus {
+    text-decoration: underline;
+}
+
+/* ===========================
+   TEXTO DE AYUDA
+   =========================== */
+.fh-login-help {
+    font-size: 13px;
+    color: #7076a0;
+}
+
+.fh-login-help p {
+    margin: 0 0 4px;
+}
+
+.fh-link-underline {
+    color: #7b8cff;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.fh-link-underline:hover,
+.fh-link-underline:focus {
+    text-decoration: underline;
+}
+
+/* ===========================
+   FLASH MESSAGES EN LOGIN
+   =========================== */
+.fh-body .alert {
+    max-width: 420px;
+    margin: 16px auto 0;
+}
+
+/* ===========================
+   MODAL RESETEAR CONTRASEÑA
+   =========================== */
+.fh-dialog-backdrop {
+    position: fixed;
+    inset: 0;
+    background: rgba(15, 18, 40, 0.45);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 999;
+}
+
+.fh-dialog {
+    background: #ffffff;
+    border-radius: 18px;
+    padding: 24px 20px 20px;
+    width: 100%;
+    max-width: 320px;
+    box-shadow: 0 18px 40px rgba(15, 18, 40, 0.35);
+    text-align: center;
+}
+
+.fh-dialog h2 {
+    margin: 0 0 10px;
+    font-size: 18px;
+    color: #22254a;
+}
+
+.fh-dialog p {
+    margin: 0 0 18px;
+    font-size: 14px;
+    color: #5b6290;
+}
+
+/* ===========================
+   RESPONSIVE
+   =========================== */
+@media (max-width: 480px) {
+    .fh-login-card {
+        padding: 32px 20px 24px;
+        border-radius: 20px;
+    }
+
+    .fh-login-title h1 {
+        font-size: 22px;
+    }
+
+    .fh-actions-row {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .fh-register-text {
+        text-align: center;
+    }
+}
+
+/* ===========================
+   FORMULARIO REGISTRO (2 COLUMNAS)
+   =========================== */
+.fh-form-grid {
+    display: flex;
+    gap: 16px;
+    margin-top: 8px;
+}
+
+.fh-form-col {
+    flex: 1 1 0;
+}
+
+@media (max-width: 768px) {
+    .fh-form-grid {
+        flex-direction: column;
+    }
+}
+
+/* ===========================
+   FORMULARIO REGISTRO (2 COLUMNAS)
+   =========================== */
+.fh-form-grid {
+    display: flex;
+    gap: 16px;
+    margin-top: 8px;
+}
+
+.fh-form-col {
+    flex: 1 1 0;
+}
+
+@media (max-width: 768px) {
+    .fh-form-grid {
+        flex-direction: column;
+    }
+}
+
+.fh-login-card--wide {
+    max-width: 560px;
+}
+
+@media (max-width: 480px) {
+    .fh-login-card--wide {
+        max-width: 100%;
+    }
+}
+
+/* ===========================
+   HOME / SECCIONES FAMHAPP
+   =========================== */
+
+.fh-home {
+    width: 100%;
+    max-width: 1150px;
+    margin: 0 auto;
+    padding: 48px 18px 30px;
+}
+
+.fh-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    margin-bottom: 18px;
+}
+
+.famhapp-title {
+    margin: 0;
+    font-size: 34px;
+    font-weight: 900;
+    color: var(--fh-darkblue);
+}
+
+.fh-settings {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    text-decoration: none;
+    color: #111;
+    font-weight: 700;
+    font-size: 14px;
+    padding: 10px 12px;
+    border-radius: 999px;
+    background: #fff;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    box-shadow: 0 10px 24px rgba(0, 0, 0, 0.06);
+}
+.fh-settings:hover {
+    background: #fafafa;
+}
+
+.fh-settings-ico {
+    font-size: 22px;
+    line-height: 1;
+}
+
+.fh-home-grid {
+    display: grid;
+    grid-template-columns: 1.35fr 1fr;
+    gap: 22px;
+    align-items: start;
+}
+@media (max-width: 920px) {
+    .fh-home-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+.fh-section {
+    margin-bottom: 18px;
+}
+
+.fh-section-head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    margin-bottom: 10px;
+    min-height: 40px;
+}
+.fh-section-head h2 {
+    margin: 0;
+    font-size: 20px;
+    font-weight: 900;
+    color: #1f2455;
+}
+
+.fh-panel {
+    background: #fff;
+    border-radius: 18px;
+    border: 1px solid rgba(124, 141, 255, 0.16);
+    box-shadow: 0 18px 50px rgba(100, 115, 255, 0.1);
+    padding: 14px;
+}
+.fh-empty {
+    padding: 8px 4px;
+    color: #7a7f9c;
+}
+
+/* ===========================
+   DISPOSITIVOS (scroll horizontal)
+   =========================== */
+
+.fh-devices-mini {
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 18px;
+    align-items: flex-start;
+    overflow-x: auto;
+    overflow-y: hidden;
+    padding: 12px 6px;
+    -webkit-overflow-scrolling: touch;
+    min-height: 130px;
+}
+
+.fh-devices-mini > a {
+    flex: 0 0 auto;
+}
+
+.fh-device-mini {
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+    color: inherit;
+    min-width: 82px;
+}
+
+.fh-device-avatar-ring {
+    width: 74px;
+    height: 74px;
+    border-radius: 999px;
+    border: 4px solid var(--fh-darkblue);
+    background: transparent;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+    padding: 0;
+    line-height: 0;
+    overflow: hidden;
+}
+
+.fh-device-mini-avatar {
+    width: 100%;
+    height: 100%;
+    border-radius: 999px;
+    display: block;
+    object-fit: cover;
+}
+
+.fh-device-mini-name {
+    font-size: 13px;
+    font-weight: 800;
+    color: #333;
+    text-align: center;
+}
+
+/* ===========================
+   BOTÓN “AÑADIR DISPOSITIVO” (tarjeta dentro del panel)
+   =========================== */
+
+.fh-device-add {
+    width: 120px;
+    height: 120px;
+    border-radius: 18px;
+    background: #fff;
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    text-decoration: none;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
+    border: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.fh-device-add-plus {
+    font-size: 48px;
+    line-height: 1;
+    font-weight: 300;
+    color: var(--fh-darkblue);
+}
+
+.fh-device-add-txt {
+    font-size: 13px;
+    font-weight: 800;
+    color: var(--fh-darkblue);
+    text-align: center;
+    padding: 0 10px;
+}
+
+.fh-devices-panel {
+    position: relative;
+    padding-right: 150px;
+}
+
+.fh-devices-panel .fh-devices-mini {
+    padding-right: 10px;
+}
+
+.fh-device-add-fixed {
+    position: absolute;
+    top: 50%;
+    right: 18px;
+    transform: translateY(-50%);
+    margin: 0;
+    z-index: 2;
+}
+
+/* ===========================
+   CONTRATOS / ACTIVIDAD (placeholders)
+   =========================== */
+
+.fh-contracts-stack {
+    display: grid;
+    gap: 12px;
+}
+
+.fh-panel-muted {
+    background: #f1f2f6;
+    border-color: rgba(0, 0, 0, 0.06);
+    box-shadow: none;
+    min-height: 58px;
+}
+
+.fh-panel-warn {
+    background: #ffb8bf;
+    border-color: rgba(0, 0, 0, 0.06);
+    box-shadow: none;
+    min-height: 70px;
+}
+
+.fh-empty-warn {
+    color: #4d1b1f;
+}
+
+.fh-panel-activity {
+    height: min(60vh, 560px);
+    overflow-y: auto;
+    overflow-x: hidden;
+    padding-top: 10px;
+}
+
+.fh-activity {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    padding: 2px 6px 10px;
+}
+
+.fh-activity-item {
+    display: grid;
+    grid-template-columns: 36px 1fr;
+    gap: 12px;
+    align-items: start;
+}
+
+.fh-activity-ico {
+    width: 24px;
+    height: 24px;
+    margin-top: 2px;
+    color: #7a7f9c;
+}
+
+.fh-activity-text {
+    font-weight: 800;
+    color: #1f2455;
+    font-size: 14px;
+    line-height: 1.25;
+}
+
+.fh-activity-date {
+    margin-top: 4px;
+    font-size: 13px;
+    color: #7a7f9c;
+}
+
+/* ===========================
+   CONFIGURACIÓN
+   =========================== */
+.fh-config-page {
+    padding: 48px 24px;
+}
+
+.fh-config-topbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 16px;
+    margin: 0 auto 24px auto;
+    max-width: 1100px;
+}
+
+.fh-config-left {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.fh-title {
+    font-size: 34px;
+    font-weight: 800;
+    margin: 0;
+}
+
+.fh-config-page .fh-btn-back {
+    background: rgba(255, 255, 255, 0.85);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+    color: #1f2a37;
+}
+
+.fh-config-page .fh-arrow {
+    font-size: 18px;
+}
+
+.fh-config-page .fh-btn-logout {
+    background: #e53935;
+    color: #fff;
+    box-shadow: 0 10px 30px rgba(229, 57, 53, 0.3);
+}
+
+.fh-config-page .fh-config-grid {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 22px;
+}
+
+.fh-config-page .fh-card.fh-config-card {
+    background: rgba(255, 255, 255, 0.92);
+    border-radius: 28px;
+    padding: 26px;
+    box-shadow: 0 18px 60px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(12px);
+}
+
+.fh-config-page .fh-card-title {
+    margin: 0 0 16px 0;
+    font-size: 18px;
+    font-weight: 800;
+    color: #111827;
+}
+
+.fh-config-page .fh-form-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 14px 16px;
+    margin-bottom: 16px;
+}
+
+.fh-config-page .fh-field label {
+    display: block;
+    font-size: 13px;
+    font-weight: 700;
+    margin: 0 0 8px 0;
+    color: #374151;
+}
+
+.fh-config-page .fh-input,
+.fh-config-page .fh-textarea {
+    width: 100%;
+    border-radius: 999px;
+    border: 1px solid rgba(117, 131, 255, 0.25);
+    background: rgba(245, 247, 255, 0.75);
+    padding: 12px 16px;
+    outline: none;
+}
+
+.fh-config-page .fh-input-group .fh-input {
+    padding-left: 44px;
+}
+
+.fh-config-page .fh-textarea {
+    border-radius: 18px;
+    min-height: 140px;
+    resize: vertical;
+}
+
+.fh-config-page .fh-input[readonly] {
+    opacity: 0.85;
+    cursor: not-allowed;
+}
+
+.fh-config-page .fh-help {
+    display: block;
+    margin-top: 8px;
+    font-size: 12px;
+    color: #6b7280;
+}
+
+.fh-config-page .fh-btn-primary {
+    background: #7583ff;
+    color: #fff;
+    box-shadow: 0 14px 35px rgba(117, 131, 255, 0.35);
+    padding: 14px 18px;
+}
+
+.fh-config-page .fh-btn-full {
+    width: 100%;
+    padding: 16px 18px;
+}
+
+@media (max-width: 980px) {
+    .fh-config-page .fh-config-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .fh-config-page .fh-form-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .fh-config-topbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .fh-config-page .fh-btn-logout {
+        align-self: flex-end;
+    }
+}
+
+.fh-config-page .fh-title {
+    color: #7583ff;
+}
+
+.fh-config-page .fh-note {
+    grid-column: 1 / -1;
+    font-size: 12px;
+    color: #6b7280;
+    margin: 4px 0 2px 0;
+}
+
+.fh-config-page .fh-input:focus,
+.fh-config-page .fh-textarea:focus,
+.fh-config-page select.fh-input:focus {
+    background: #ffffff;
+    border-color: rgba(117, 131, 255, 0.55);
+    box-shadow: 0 0 0 4px rgba(117, 131, 255, 0.15);
+}
+.fh-config-page .fh-input[readonly]:focus {
+    background: rgba(245, 247, 255, 0.75);
+    box-shadow: none;
+}
+
+.fh-config-page .fh-check {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 10px;
+    margin-bottom: 14px;
+    font-weight: 600;
+    color: #374151;
+}
+
+.fh-config-page .fh-check input {
+    width: 18px;
+    height: 18px;
+    accent-color: #7583ff;
+}
+
+.fh-config-page .fh-form-msg {
+    margin-top: 12px;
+    padding: 12px 14px;
+    border-radius: 14px;
+    font-weight: 700;
+    font-size: 13px;
+}
+
+.fh-config-page .fh-form-msg.is-success {
+    background: rgba(16, 185, 129, 0.12);
+    border: 1px solid rgba(16, 185, 129, 0.25);
+    color: #065f46;
+}
+
+.fh-config-page .fh-form-msg.is-error {
+    background: rgba(239, 68, 68, 0.12);
+    border: 1px solid rgba(239, 68, 68, 0.25);
+    color: #7f1d1d;
+}
+
+/* ===========================
+   HOME
+   =========================== */
+
+.fh-add-device-btn{
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 14px;
+    border-radius: 999px;
+    text-decoration: none;
+    font-weight: 800;
+    font-size: 13px;
+    color: #fff;
+    background: var(--fh-darkblue);
+    box-shadow: 0 12px 26px rgba(117, 131, 255, 0.35);
+    border: 1px solid rgba(117, 131, 255, 0.25);
+}
+
+.fh-add-device-btn:hover,
+.fh-add-device-btn:focus{
+    filter: brightness(0.98);
+    transform: translateY(-1px);
+}
+
+.fh-add-device-btn .fh-add-ico{
+    width: 18px;
+    height: 18px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 999px;
+    background: rgba(255,255,255,0.18);
+    line-height: 1;
+    font-size: 16px;
+}
+
+.fh-panel.fh-panel-devices{
+    height: min(60vh, 560px);
+    overflow: hidden;
+    padding: 14px;
+}
+
+.fh-devices-list{
+    height: 100%;
+    overflow-y: auto;
+    overflow-x: hidden;
+    padding: 6px;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.fh-device-card{
+    display: flex;
+    gap: 14px;
+    align-items: center;
+    text-decoration: none;
+    color: inherit;
+    background: rgba(245, 247, 255, 0.85);
+    border: 1px solid rgba(117, 131, 255, 0.18);
+    border-radius: 18px;
+    padding: 12px 14px;
+}
+
+.fh-device-card:hover,
+.fh-device-card:focus{
+    background: rgba(245, 247, 255, 1);
+    border-color: rgba(117, 131, 255, 0.28);
+}
+
+.fh-device-card .fh-device-avatar-ring{
+    width: 64px;
+    height: 64px;
+    border-width: 4px;
+    flex: 0 0 auto;
+}
+
+.fh-device-card .fh-device-mini-avatar{
+    width: 100%;
+    height: 100%;
+}
+
+.fh-device-info{
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    min-width: 0;
+}
+
+.fh-device-line{
+    font-size: 13px;
+    color: #1f2455;
+    line-height: 1.25;
+    font-weight: 700;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.fh-device-line strong{
+    font-weight: 900;
+}
+
+.fh-device-line--muted{
+    color: #6b6f90;
+    font-weight: 800;
+}
+
+.fh-devices-panel{
+    padding-right: 14px;
+}
+
+.fh-devices-mini{
+    overflow: visible;
+    min-height: unset;
+}
+
+.fh-device-add,
+.fh-device-add-fixed{
+    display: none;
+}
+
+.fh-panel.fh-panel-devices{
+    height: min(60vh, 560px);
+    overflow: hidden;
+    padding: 14px;
+}
+
+.fh-devices-list{
+    height: 100%;
+    overflow-y: auto;
+    overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    padding: 4px;
+}
+
+.fh-device-card{
+    display: grid;
+    grid-template-columns: 64px 1fr;
+    gap: 14px;
+    align-items: center;
+    padding: 12px;
+    border-radius: 18px;
+    background: rgba(245, 247, 255, 0.75);
+    border: 1px solid rgba(124, 141, 255, 0.18);
+    text-decoration: none;
+    color: inherit;
+    transition: transform 0.08s ease, box-shadow 0.2s ease, background-color 0.2s ease;
+}
+
+.fh-device-card:hover{
+    background: rgba(255, 255, 255, 0.95);
+    box-shadow: 0 14px 34px rgba(100, 115, 255, 0.16);
+    transform: translateY(-1px);
+}
+
+.fh-device-card .fh-device-avatar-ring{
+    width: 64px;
+    height: 64px;
+    border-width: 4px;
+}
+
+.fh-device-lines{
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    min-width: 0;
+}
+
+.fh-device-line-1{
+    font-weight: 900;
+    color: #1f2455;
+    font-size: 14px;
+    line-height: 1.2;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.fh-device-line-2,
+.fh-device-line-3{
+    font-size: 13px;
+    font-weight: 700;
+    color: #6b6f90;
+    line-height: 1.2;
+}
+
+.fh-device-line-2 strong,
+.fh-device-line-3 strong{
+    color: #1f2455;
+    font-weight: 900;
+}
+
+@media (max-width: 920px){
+    .fh-panel.fh-panel-devices,
+    .fh-panel.fh-panel-activity{
+        height: min(60vh, 520px);
+    }
+}
+
+/* ===========================
+   DETALLES DE USUARIO
+   =========================== */
+.fh-ud-header {
+  margin-bottom: 16px;
+}
+
+.fh-ud-left {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.fh-ud-title {
+  font-size: 34px; 
+  margin: 0;
+}
+
+.fh-ud-backtext {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 44px;
+  padding: 0 18px;
+  border-radius: 999px;
+  background: #fff;
+  border: 1px solid rgba(124, 141, 255, 0.18);
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.06);
+  text-decoration: none;
+  font-weight: 900;
+  color: #1f2455;
+}
+
+.fh-ud-icon-btn {
+  width: 44px;
+  height: 44px;
+  border-radius: 16px;
+  background: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid rgba(124, 141, 255, 0.18);
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.06);
+  text-decoration: none;
+}
+
+.fh-ud-icon-btn img {
+  width: 20px;
+  height: 20px;
+}
+
+.fh-ud-usercard {
+  background: var(--fh-softblue);
+  border-radius: 18px;
+  border: 1px solid rgba(124, 141, 255, 0.18);
+  box-shadow: 0 18px 50px rgba(100, 115, 255, 0.10);
+  padding: 16px;
+  display: grid;
+  grid-template-columns: 86px 1fr;
+  gap: 18px;
+  margin-bottom: 18px;
+}
+
+.fh-ud-avatarwrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.fh-ud-avatar {
+  width: 74px;
+  height: 74px;
+  border-radius: 999px;
+  background: #fff;
+  padding: 6px;
+}
+
+.fh-ud-fields {
+  display: grid;
+  grid-template-columns: 220px 1fr;
+  column-gap: 22px;
+  row-gap: 10px;
+  align-items: center;
+  min-width: 0;
+}
+
+.fh-ud-row {
+  display: contents; 
+}
+
+.fh-ud-label {
+  font-weight: 900;
+  color: #1f2455;
+  opacity: .85;
+}
+
+.fh-ud-value {
+  font-weight: 900;
+  color: #1f2455;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  min-width: 0;
+  text-align: right;
+}
+
+.fh-ud-grid {
+  gap: 22px;
+}
+
+.fh-ud-panel {
+  min-height: 320px;
+}
+
+.fh-ud-historypanel {
+  height: min(60vh, 560px);
+  overflow: hidden;
+  padding: 14px;
+}
+
+.fh-ud-history {
+  height: 100%;
+  overflow-y: auto;
+  overflow-x: hidden;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  padding: 4px;
+}
+
+.fh-ud-contract {
+  border-radius: 18px;
+  padding: 12px 14px;
+  border: 1px solid rgba(124, 141, 255, 0.16);
+  background: rgba(245, 247, 255, 0.75);
+}
+
+.fh-ud-contract.is-good {
+  background: var(--fh-completed-bg);
+  border-color: var(--fh-completed-border);
+}
+
+.fh-ud-contract.is-bad {
+  background: var(--fh-failed-bg);
+  border-color: var(--fh-failed-border);
+}
+
+.fh-ud-contract-line {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: 900;
+  color: #1f2455;
+  font-size: 14px;
+}
+
+.fh-ud-ic {
+  width: 20px;
+  height: 20px;
+}
+
+.fh-ud-error {
+  color: #b00020;
+  font-weight: 900;
+}
+
+.fh-ud-muted {
+  color: #6b6b6b;
+  font-weight: 800;
+}
+
+@media (max-width: 900px) {
+  .fh-ud-usercard {
+    grid-template-columns: 72px 1fr;
+  }
+
+  .fh-ud-title {
+    font-size: 28px;
+  }
+
+  .fh-ud-fields {
+    grid-template-columns: 160px 1fr;
+    column-gap: 14px;
+  }
+}
